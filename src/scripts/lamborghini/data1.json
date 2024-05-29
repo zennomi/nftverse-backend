@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Aventador LP 780-4 Ultimae",
+        "type": "Coupe",
+        "tier": "S",
+        "power": "780",
+        "color": "Nero Cosmico (Black)",
+        "year": "2022",
+        "description": "The Aventador Ultimae is the final iteration of the iconic Aventador. It boasts the most powerful iteration of the naturally-aspirated V12 engine ever produced by Lamborghini. With its aggressive design and focus on performance, it remains a true driver's car.",
+        "speed": "220"
+    },
+    {
+        "name": "Huracán STO",
+        "type": "Coupe",
+        "tier": "S",
+        "power": "640",
+        "color": "Rosso Victus (Red)",
+        "year": "2021",
+        "description": "Designed for the track, the Huracán STO is a homologated version of the Super Trofeo EVO race car. Featuring aerodynamic enhancements, lightweight materials, and a sharpened focus on handling, it offers an exhilarating track-focused experience.",
+        "speed": "192"
+    },
+    {
+        "name": "Urus Performante",
+        "type": "SUV",
+        "tier": "S",
+        "power": "650",
+        "color": "Grigio Keres (Grey)",
+        "year": "2023",
+        "description": "The Urus Performante is the performance-oriented variant of the Lamborghini Urus SUV. With increased power and sharper handling, it pushes the boundaries of what an SUV can achieve.",
+        "speed": "190"
+    },
+    {
+        "name": "Sián FKP 37",
+        "type": "Coupe",
+        "tier": "SS",
+        "power": "819",
+        "color": "Verde Gea (Green)",
+        "year": "2020",
+        "description": "A limited-edition hybrid masterpiece, the Sián FKP 37 combines a powerful V12 engine with a mild-hybrid system. Its futuristic design and innovative technology make it a true collector's item.",
+        "speed": "217"
+    },
+    {
+        "name": "Centenario LP770-4",
+        "type": "Coupe",
+        "tier": "SS",
+        "power": "770",
+        "color": "Bianco Fu (White)",
+        "year": "2016",
+        "description": "Built to celebrate Lamborghini's 100th anniversary, the Centenario is a limited-edition masterpiece of design and engineering. Its aggressive stance and powerful V12 engine make it a true testament to Lamborghini's heritage.",
+        "speed": "217"
+    },
+    {
+        "name": "Countach LPI 800-4",
+        "type": "Coupe",
+        "tier": "SS",
+        "power": "804",
+        "color": "Viola Pastrana (Purple)",
+        "year": "2022",
+        "description": "A modern reimagining of the iconic Countach, the Countach LPI 800-4 combines a powerful V12 engine with a plug-in hybrid system. Its retro-futuristic design pays homage to the original while offering cutting-edge technology.",
+        "speed": "221"
+    },
+    {
+        "name": "Veneno Roadster",
+        "type": "Roadster",
+        "tier": "SSS",
+        "power": "750",
+        "color": "Bianco Siderale (White)",
+        "year": "2014",
+        "description": "The Veneno Roadster is one of the rarest and most extreme Lamborghinis ever built. With its aggressive design, lightweight materials, and powerful V12 engine, it is a true symbol of Lamborghini's audacity.",
+        "speed": "220"
+    },
+    {
+        "name": "Egoista",
+        "type": "Coupe",
+        "tier": "SSS",
+        "power": "600",
+        "color": "Arancio Borealis (Orange)",
+        "year": "2013",
+        "description": "A single-seater concept car, the Egoista is a radical expression of Lamborghini's design philosophy. Its fighter jet-inspired cockpit and aggressive stance make it a true head-turner.",
+        "speed": "200"
+    },
+    {
+        "name": "Reventón LP660",
+        "type": "Coupe",
+        "tier": "SSS",
+        "power": "670",
+        "color": "Grigio Reventón (Grey)",
+        "year": "2008",
+        "description": "A limited-edition variant of the Murciélago, the Reventón features a unique matte grey paint job and aerodynamic enhancements. Its aggressive design and exclusivity make it a highly sought-after collector's item.",
+        "speed": "221"
+    },
+    {
+        "name": "Murciélago LP640",
+        "type": "Coupe",
+        "tier": "S",
+        "power": "640",
+        "color": "Giallo Midas (Yellow)",
+        "year": "2006",
+        "description": "The successor to the Diablo, the Murciélago ushered in a new era of design and performance for Lamborghini. Its aggressive stance and powerful V12 engine made it a true supercar icon.",
+        "speed": "211"
+    },
+    {
+        "name": "Diablo VT 6.0 SE",
+        "type": "Coupe",
+        "tier": "S",
+        "power": "592",
+        "color": "Rosso Monocoat (Red)",
+        "year": "1999",
+        "description": "The Diablo VT 6.0 SE was the final iteration of the iconic Diablo. Featuring a more powerful V12 engine and all-wheel drive, it offered a thrilling driving experience.",
+        "speed": "205"
+    },
+    {
+        "name": "Countach 5000 QV",
+        "type": "Coupe",
+        "tier": "SS",
+        "power": "455",
+        "color": "Rosso Arancio (Orange)",
+        "year": "1985",
+        "description": "One of the most iconic",
+        "speed": "195"
+    }
+]
