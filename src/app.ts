@@ -4,6 +4,7 @@ import path from 'path';
 import cors from "cors";
 
 import config from './configs/env';
+import { fileRouter } from './routes';
 
 const app = express();
 
@@ -13,6 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/static', express.static(path.join(__dirname, 'static')))
+
+app.use('/files', fileRouter)
 
 app.use((error: any, req: Request, res: Response, next: NextFunction) => {
     if (typeof error === "string") {
