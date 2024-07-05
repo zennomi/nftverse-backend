@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-
+import { posix } from 'path'
 import { createHash } from "crypto";
 import { createReadStream, createWriteStream, readFileSync } from "fs";
 import axios from "axios";
@@ -7,6 +7,7 @@ import { fromFile } from "file-type";
 import FileModel from "../models/file.model";
 import { load } from "cheerio";
 import { last } from "lodash";
+import config from "../configs/env";
 
 export const getFile = async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -50,8 +51,19 @@ function stringToUuid(str: string) {
     ].join('-');
 }
 
+const ipfsRegExp = /^ipfs:\/\/(.+)$/
+
 async function cacheFileFromUrl(url: string) {
-    if (url.startsWith("https://turnon.meebits.app/viewer/")) url = "https://livingpfp.meebits.app/api/meebits?type=3d&token_id=" + last(url.split("/"))
+    // ipfs
+    if (url.startsWith('ipfs://')) url = posix.join(config.IPFS_GATEWAY, ipfsRegExp.exec(url)![1])
+
+    // meebits
+    if (url.startsWith("https://turnon.meebits.app/viewer/")) url = "https://livingpfp.meebits.app/api/meebits?type=3d&token_id=" + last(url.split("/"));
+
+    const existedFile = await FileModel.findById(url)
+
+    if (existedFile) return existedFile;
+
     const id = stringToUuid(url)
     const path = __dirname + "/../static/proxy/" + id
     const fileStream = createWriteStream(path)

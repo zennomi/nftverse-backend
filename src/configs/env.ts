@@ -8,6 +8,7 @@ const createConfigFromEnvironment = (environment: NodeJS.ProcessEnv) => {
         MONGO_URL: z.string(),
         DB_NAME: z.string(),
         PORT: z.number(),
+        IPFS_GATEWAY: z.string().default("https://ipfs.io/ipfs/"),
     });
 
     return {
