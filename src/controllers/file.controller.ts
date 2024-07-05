@@ -6,6 +6,7 @@ import axios from "axios";
 import { fromFile } from "file-type";
 import FileModel from "../models/file.model";
 import { load } from "cheerio";
+import { last } from "lodash";
 
 export const getFile = async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -50,6 +51,7 @@ function stringToUuid(str: string) {
 }
 
 async function cacheFileFromUrl(url: string) {
+    if (url.startsWith("https://turnon.meebits.app/viewer/")) url = "https://livingpfp.meebits.app/api/meebits?type=3d&token_id=" + last(url.split("/"))
     const id = stringToUuid(url)
     const path = __dirname + "/../static/proxy/" + id
     const fileStream = createWriteStream(path)
