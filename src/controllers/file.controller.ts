@@ -1,10 +1,11 @@
 import { NextFunction, Request, Response } from "express";
 
 import { createHash } from "crypto";
-import { createReadStream, createWriteStream } from "fs";
+import { createReadStream, createWriteStream, readFileSync } from "fs";
 import axios from "axios";
 import { fromFile } from "file-type";
 import FileModel from "../models/file.model";
+import { load } from "cheerio";
 
 export const getFile = async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -68,11 +69,39 @@ async function cacheFileFromUrl(url: string) {
     let fileType: any = await fromFile(path);
 
     if (!fileType) {
-        fileType = {
-            ext: "json",
-            mime: "application/json"
+        const fileContent = readFileSync(path, 'utf8');
+        if (isJSON(fileContent)) {
+            fileType = {
+                ext: "json",
+                mime: "application/json"
+            }
+        } if (isHTML(fileContent)) {
+            fileType = {
+                ext: "html",
+                mime: "text/html"
+            }
+        } else {
+            throw new Error("invalidType")
         }
     }
 
     return await FileModel.create({ _id: url, mime: fileType.mime, path: id })
+}
+
+function isJSON(content: string) {
+    try {
+        JSON.parse(content);
+        return true;
+    } catch (error) {
+        return false;
+    }
+}
+
+function isHTML(content: string) {
+    try {
+        load(content);
+        return true;
+    } catch (error) {
+        return false;
+    }
 }
